@@ -1,0 +1,38 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+    </header>
+    
+    <div id="main">
+      <p><a href="#" id="new_window">open new window</a></p>
+      <p><a href="#" id="close_window">close new window</a></p>
+      <p><a href="#" id="bk-trigger">BML</a></p>
+      <p><a href="#" id="doit">doit</a></p>
+      <p><a href="#" id="runThisForMeId">runThisForMe</a></p>
+      <a href="javascript:(function%20()%7B%0A%0A%20%20%20%20%2F****%20PUT%20YOUR%20PATH%20HERE%20****%2F%0A%20%20%20%20var%20%20dropboxPath%20%3D%20'http%3A%2F%2Fdl.dropbox.com%2Fu%2F9610286%2Fhighlightbmljec.js'%3B%0A%20%20%20%20%2F****%20DON'T%20EDIT%20BELOW%20HERE%20****%2F%0A%20%20%20%20%0A%20%20%20%20var%20%20head%20%3D%20document.head%20%7C%7C%20document.getElementsByTagName(%20%22head%22%20)%5B0%5D%20%7C%7C%20document.documentElement%2C%0A%20%20%20%20%20%20%20%20%20tag%20%3D%20document.createElement('script')%3B%0A%20%20%20%20%0A%20%20%20%20tag.async%20%3D%20true%3B%0A%20%20%20%20tag.src%20%3D%20%22https%3A%2F%2Fajax.googleapis.com%2Fajax%2Flibs%2Fjquery%2F1.7.1%2Fjquery.js%22%3B%0A%20%20%20%20tag.onload%20%3D%20function()%7B%0A%20%20%20%20%20%20%20%20console.log('jquery%20loaded')%3B%0A%20%20%20%20%20%20%20%20%2F%2FjQuery.getScript(dropboxPath)%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20searchArray%20%3D%20%5B'project'%2C%22%25%22%2C'proceeds'%2C'charity'%2C'charities'%2C'discount'%2C'coupon'%2C'sweepstakes'%2C'raffle'%2C'drawing'%2C'percentage'%2C'%20win%20'%2C'opportunity%20to%20win'%2C'Krochet%20Kids'%2C'empower'%2C'marginalize'%2C'At%20risk'%2C'at-risk'%2C'Homeless'%2C'scholarship'%2C'AIDS'%2C'HIV'%2C'cancer'%2C'minecraft%20server'%2C'social%20network'%2C'%20NGO'%2C'clinic'%2C'Guidelines'%2C'contest'%2C'competition'%2C'knife'%2C'%20gun'%2C'weapon'%2C'energy%20drink'%2C'health'%2C'nutrition'%2C'property'%2C'beer'%2C'wine'%2C'alcohol'%2C'self-help'%2C'SEO'%2C'advertising'%2C'advertisement'%2C'startup'%2C'nonprofit'%2C'non-profit'%2C'awareness'%2C'syndrome'%2C'autism'%5D%3B%0A%20%20%20%20%20%20%20%20var%20targetTextArray%20%3D%20%5B'%23body'%5D%3B%0A%0A%20%20%20%20%20%20%20%20for%20(var%20i%20%3D%200%3B%20i%20%3C%20targetTextArray.length%3B%20i%2B%2B)%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20var%20targetText%20%3D%20%24(targetTextArray%5Bi%5D).html()%3B%0A%20%20%20%20%20%20%09%09console.log('OooooooooOOOO%2C%20I%20love%20Jared!')%3B%0A%0A%20%20%20%20%20%20%20%20%20%20for%20(var%20j%20%3D%200%3B%20j%20%3C%20searchArray.length%3B%20j%2B%2B)%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20searchTerm%20%3D%20searchArray%5Bj%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20highlightStartTag%20%3D%20%22%3Cfont%20style%3D'color%3Ablack%3B%20background-color%3A%23AFFACE%3B'%3E%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20highlightEndTag%20%3D%20%22%3C%2Ffont%3E%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20newText%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20k%20%3D%20-1%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20lcSearchTerm%20%3D%20searchTerm.toLowerCase()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20lcTargetText%20%3D%20targetText.toLowerCase()%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20while%20(targetText.length%20%3E%200)%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20k%20%3D%20lcTargetText.indexOf(lcSearchTerm%2C%20k%2B1)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(k%20%3C%200)%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20newText%20%2B%3D%20targetText%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20targetText%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(targetText.lastIndexOf('%3E'%2C%20k)%20%3E%3D%20targetText.lastIndexOf('%3C'%2C%20k))%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20newText%20%2B%3D%20targetText.substring(0%2C%20k)%20%2B%20highlightStartTag%20%2B%20targetText.substr(k%2C%20searchTerm.length)%20%2B%20highlightEndTag%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20targetText%20%3D%20targetText.substr(k%20%2B%20searchTerm.length)%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20lcTargetText%20%3D%20targetText.toLowerCase()%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20k%20%3D%20-1%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%2F%2Fend%20else%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%2F%2Fend%20while%0A%20%20%20%20%20%20%20%20%20%20%20%20targetText%20%3D%20newText%3B%0A%0A%20%20%20%20%20%20%20%20%20%20%7D%20%2F%2Fend%20j%20loop%0A%20%20%20%20%20%20%20%20%20%20%24(targetTextArray%5Bi%5D).html(targetText)%3B%20%2F%2F%20replace%20the%20text%0A%20%20%20%20%20%20%20%20%7D%20%2F%2Fend%20i%20loop%0A%20%20%20%20%7D%0A%20%20%20%20head.insertBefore(%20tag%2C%20head.firstChild%20)%3B%0A%7D)()">Bookmarklet for highlighting text</a>
+      
+    <p id="body">projects testing coupon food hamburger</p>
+
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js" type="text/javascript"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
